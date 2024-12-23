@@ -26,4 +26,7 @@ describe('calculateNumber', () => {
     it('should return 0 when inputs are 0 and 0', () => {
         assert.strictEqual(calculateNumber(0, 0), 0);
     });
+    it('should round only the second number when the first is already an integer', () => {
+        assert.strictEqual(calculateNumber(4, 3.7), 8);
+    });
 });
